@@ -1,8 +1,8 @@
 "use strict";
-(() => {
-    let avengers = 123;
-    let exist;
-    let power;
+(function () {
+    var avengers = 123;
+    var exist;
+    var power;
     avengers = 'Dr Strange';
     // console.log(avengers.charAt(0));
     console.log(avengers.charAt(0));
