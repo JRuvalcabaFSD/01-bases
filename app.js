@@ -1,2 +1,8 @@
-var msg = 'Hola Mundo';
-console.log(msg);
+"use strict";
+const msg = 'Hola Mundo';
+let hero = {
+    name: 'Ironman',
+    age: 50,
+};
+hero.age = 50;
+console.log(hero.age + 1);
