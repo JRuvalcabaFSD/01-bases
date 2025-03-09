@@ -1,7 +1,7 @@
 "use strict";
-(function () {
-    var isSuperman = true;
-    var isBatman = false;
+(() => {
+    let isSuperman = true;
+    let isBatman = false;
     isSuperman = true && false;
-    console.log({ isSuperman: isSuperman });
+    console.log({ isSuperman });
 })();
