@@ -1,3 +1,4 @@
+//! Error 2 - Nombres de tipos en Mayusculas
 // Objetos
 
 type superVehicles = {
@@ -64,12 +65,13 @@ type villianTeem = {
 	miembros: string[];
 };
 
-const charles = {
+//! Error 1 - no puse el tipo
+const charles: superLeader = {
 	poder: 'psiquico',
 	estatura: 1.78,
 };
 
-const apocalipsis = {
+const apocalipsis: villianTeem = {
 	lider: true,
 	miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
 };

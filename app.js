@@ -1,4 +1,5 @@
 "use strict";
+//! Error 2 - Nombres de tipos en Mayusculas
 // Objetos
 const batimovil = {
     carroceria: 'Negra',
@@ -33,6 +34,7 @@ const villanos = [
         mutante: true,
     },
 ];
+//! Error 1 - no puse el tipo
 const charles = {
     poder: 'psiquico',
     estatura: 1.78,
