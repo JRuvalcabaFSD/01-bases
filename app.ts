@@ -1,8 +1,31 @@
-const msg: string = 'Hola Mundo';
-let hero = {
-	name: 'Ironman',
-	age: 50,
+// Funciones Básicas
+const sumar = (a: number, b: number): number => {
+	return a + b;
 };
 
-hero.age = 50;
-console.log(hero.age + 1);
+const contar = (heroes: string[]): number => {
+	return heroes.length;
+};
+const superHeroes: string[] = ['Flash', 'Arrow', 'Superman', 'Linterna Verde'];
+contar(superHeroes);
+
+//Parametros por defecto
+const llamarBatman = (llamar: boolean = true): void => {
+	if (llamar) {
+		console.log('Batiseñal activada');
+	}
+};
+
+llamarBatman();
+
+// Rest?
+const unirheroes = (...personas: string[]) => {
+	return personas.join(', ');
+};
+
+// Tipo funcion
+const noHaceNada = (numero: number, texto: string, booleano: boolean, arreglo: []): void => {};
+
+// Crear el tipo de funcion que acepte la funcion "noHaceNada"
+let noHaceNadaTampoco: (a: number, b: string, c: boolean, d: []) => void;
+noHaceNadaTampoco = noHaceNada;
