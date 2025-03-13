@@ -1,8 +1,47 @@
 "use strict";
-const msg = 'Hola Mundo';
-let hero = {
-    name: 'Ironman',
-    age: 50,
+// Objetos
+const batimovil = {
+    carroceria: 'Negra',
+    modelo: '6x6',
+    antibalas: true,
+    pasajeros: 4,
 };
-hero.age = 50;
-console.log(hero.age + 1);
+const bumblebee = {
+    carroceria: 'Amarillo con negro',
+    modelo: '4x2',
+    antibalas: true,
+    pasajeros: 4,
+    disparar() {
+        // El metodo disparar es opcional
+        console.log('Disparando');
+    },
+};
+const villanos = [
+    {
+        nombre: 'Lex Luthor',
+        edad: 54,
+        mutante: false,
+    },
+    {
+        nombre: 'Erik Magnus Lehnsherr',
+        edad: 49,
+        mutante: true,
+    },
+    {
+        nombre: 'James Logan',
+        edad: undefined,
+        mutante: true,
+    },
+];
+const charles = {
+    poder: 'psiquico',
+    estatura: 1.78,
+};
+const apocalipsis = {
+    lider: true,
+    miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
+};
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique;
+mystique = charles;
+mystique = apocalipsis;
