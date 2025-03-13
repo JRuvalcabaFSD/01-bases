@@ -18,14 +18,17 @@ const llamarBatman = (llamar: boolean = true): void => {
 
 llamarBatman();
 
+//! Error1
 // Rest?
-const unirheroes = (...personas: string[]) => {
+const unirheroes = (...personas: string[]): string => {
 	return personas.join(', ');
 };
 
+//! Error 2
 // Tipo funcion
-const noHaceNada = (numero: number, texto: string, booleano: boolean, arreglo: []): void => {};
+const noHaceNada = (numero: number, texto: string, booleano: boolean, arreglo: string[]): void => {};
 
+//! Error 3
 // Crear el tipo de funcion que acepte la funcion "noHaceNada"
-let noHaceNadaTampoco: (a: number, b: string, c: boolean, d: []) => void;
+let noHaceNadaTampoco: (n: number, s: string, b: boolean, a: string[]) => void;
 noHaceNadaTampoco = noHaceNada;
