@@ -13,5 +13,5 @@
 	}
 
 	const antMan = new Avenger('Antman', 'Capitan', 'Scott Lang');
-	console.log(antMan);
+	// console.log(antMan);
 })();
