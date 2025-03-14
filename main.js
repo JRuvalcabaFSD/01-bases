@@ -6,3 +6,4 @@ let hero = {
 };
 hero.age = 50;
 console.log(hero.age + 1);
+//# sourceMappingURL=main.js.map
