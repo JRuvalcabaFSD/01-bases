@@ -15,6 +15,19 @@
     };
 })();
 (function () {
+    var Mutan = (function () {
+        function Mutan(name, realName, age) {
+            this.name = name;
+            this.realName = realName;
+            this.age = age;
+        }
+        Mutan.prototype.mutanPower = function (id) {
+            return "".concat(this.name, " ").concat(this.realName);
+        };
+        return Mutan;
+    }());
+})();
+(function () {
     var client = {
         name: 'Jesus',
         age: 43,
