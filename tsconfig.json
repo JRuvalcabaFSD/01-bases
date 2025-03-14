@@ -114,6 +114,6 @@
 		"watchFile": "fixedPollingInterval",
 		"watchDirectory": "fixedPollingInterval",
 		"synchronousWatchDirectory": true
-	}
-	// "include": ["ES6"]
+	},
+	"include": ["interfaces"]
 }
