@@ -23,4 +23,9 @@
 	};
 
 	printAventer(avengers);
+
+	const avengersArr: [string, boolean, number] = ['Cap. America', true, 150.15];
+
+	const [cap, ironman, seriaunnumero] = avengersArr;
+	// console.log({ ironman, cap });
 })();

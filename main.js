@@ -23,6 +23,8 @@ var __rest = (this && this.__rest) || function (s, e) {
         console.log(ironman, resto);
     };
     printAventer(avengers);
+    var avengersArr = ['Cap. America', true, 150.15];
+    var cap = avengersArr[0], ironman = avengersArr[1], seriaunnumero = avengersArr[2];
 })();
 (function () {
     var getName = function () { return console.log('Viejo getName'); };
