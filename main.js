@@ -22,9 +22,27 @@ var __rest = (this && this.__rest) || function (s, e) {
         var ironman = _a.ironman, resto = __rest(_a, ["ironman"]);
         console.log(ironman, resto);
     };
-    printAventer(avengers);
     var avengersArr = ['Cap. America', true, 150.15];
     var cap = avengersArr[0], ironman = avengersArr[1], seriaunnumero = avengersArr[2];
+})();
+(function () {
+    var ironman = {
+        nombre: 'Tony Stark',
+        weapon: 'Armorsuit',
+    };
+    var capAmerica = {
+        nombre: 'Steve Rogers',
+        weapon: 'Shield',
+    };
+    var thor = {
+        nombre: 'thor',
+        weapon: 'Mjolnir',
+    };
+    var avengers = [ironman, thor, capAmerica];
+    for (var _i = 0, avengers_1 = avengers; _i < avengers_1.length; _i++) {
+        var avenger = avengers_1[_i];
+        console.log(avenger.nombre, avenger.weapon);
+    }
 })();
 (function () {
     var getName = function () { return console.log('Viejo getName'); };

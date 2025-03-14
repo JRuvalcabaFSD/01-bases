@@ -22,7 +22,7 @@
 		console.log(ironman, resto);
 	};
 
-	printAventer(avengers);
+	// printAventer(avengers);
 
 	const avengersArr: [string, boolean, number] = ['Cap. America', true, 150.15];
 
