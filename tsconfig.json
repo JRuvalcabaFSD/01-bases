@@ -115,6 +115,10 @@
 		"watchDirectory": "fixedPollingInterval",
 		"synchronousWatchDirectory": true
 	},
+<<<<<<< HEAD
 	"exclude": ["node_modules2/*.ts"]
 	// "include": ["node_modules2"]
+=======
+	"include": ["ES6"]
+>>>>>>> Caracteristicas-ES6
 }
