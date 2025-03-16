@@ -116,5 +116,5 @@
 		"watchDirectory": "fixedPollingInterval",
 		"synchronousWatchDirectory": true
 	},
-	"include": ["interfaces"]
+	"include": ["namespaces"]
 }
