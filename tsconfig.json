@@ -57,7 +57,8 @@
 		// "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
 		"sourceMap": true /* Create source map files for emitted JavaScript files. */,
 		// "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
-		// "noEmit": true,                                   /* Disable emitting files from a compilation. */
+		// "noEmit": true /* Disable emitting files from a compilation. */,
+		"noEmitOnError": true,
 		"outFile": "./main.js" /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */,
 		// "outDir": "./",                                   /* Specify an output folder for all emitted files. */
 		"removeComments": true /* Disable emitting comments. */,
@@ -115,10 +116,5 @@
 		"watchDirectory": "fixedPollingInterval",
 		"synchronousWatchDirectory": true
 	},
-<<<<<<< HEAD
-	"exclude": ["node_modules2/*.ts"]
-	// "include": ["node_modules2"]
-=======
-	"include": ["ES6"]
->>>>>>> Caracteristicas-ES6
+	"include": ["Classes"]
 }

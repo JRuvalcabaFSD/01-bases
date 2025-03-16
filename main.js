@@ -1,99 +1,94 @@
-"use strict";
-<<<<<<< HEAD
+'use strict';
 (() => {
-    const batimovil = {
-        carroceria: 'Negra',
-        modelo: '6x6',
-        antibalas: true,
-        pasajeros: 4,
-    };
-    const bumblebee = {
-        carroceria: 'Amarillo con negro',
-        modelo: '4x2',
-        antibalas: true,
-        pasajeros: 4,
-        disparar() {
-            console.log('Disparando');
-        },
-    };
-    const villanos = [
-        {
-            nombre: 'Lex Luthor',
-            edad: 54,
-            mutante: false,
-        },
-        {
-            nombre: 'Erik Magnus Lehnsherr',
-            edad: 49,
-            mutante: true,
-        },
-        {
-            nombre: 'James Logan',
-            edad: undefined,
-            mutante: true,
-        },
-    ];
-    const charles = {
-        poder: 'psiquico',
-        estatura: 1.78,
-    };
-    console.log('Pasa por aqui');
-    const apocalipsis = {
-        lider: true,
-        miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
-    };
-    console.log({ apocalipsis });
-    let mystique;
-    mystique = charles;
-    mystique = apocalipsis;
-=======
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-(function () {
-    var avengers = {
-        nick: 'Samuel L. Jackons',
-        ironman: 'Robert Downey Jr.',
-        vision: 'Paul Bettany',
-        activos: true,
-        poder: 1500.128456,
-    };
-    var printAventer = function (_a) {
-        var ironman = _a.ironman, resto = __rest(_a, ["ironman"]);
-        console.log(ironman, resto);
-    };
-    var avengersArr = ['Cap. America', true, 150.15];
-    var cap = avengersArr[0], ironman = avengersArr[1], seriaunnumero = avengersArr[2];
+	class Mutante {
+		constructor(name, realName) {
+			this.name = name;
+			this.realName = realName;
+		}
+	}
+	class Xmen extends Mutante {
+		salvarmUNDO() {
+			return 'Mundo a salvo';
+		}
+	}
+	class Villan extends Mutante {
+		conquistarMundo() {
+			return 'Mundo conquistado';
+		}
+	}
+	const wolverine = new Xmen('Wolvering', 'Logan');
+	const magneto = new Villan('magneto', 'Magnus');
+	const printName = (character) => {
+		console.log(character.realName);
+	};
 })();
-(function () {
-    var ironman = {
-        nombre: 'Tony Stark',
-        weapon: 'Armorsuit',
-    };
-    var capAmerica = {
-        nombre: 'Steve Rogers',
-        weapon: 'Shield',
-    };
-    var thor = {
-        nombre: 'thor',
-        weapon: 'Mjolnir',
-    };
-    var avengers = [ironman, thor, capAmerica];
-    for (var _i = 0, avengers_1 = avengers; _i < avengers_1.length; _i++) {
-        var avenger = avengers_1[_i];
-        console.log(avenger.nombre, avenger.weapon);
-    }
+(() => {
+	class Avenger {
+		static getAvgAge() {
+			return this.name;
+		}
+		constructor(name, team, realName) {
+			this.name = name;
+			this.team = team;
+			this.realName = realName;
+		}
+		bio() {
+			return `${this.name} (${this.team})`;
+		}
+	}
+	Avenger.avgAge = 35;
+	const antMan = new Avenger('Antman', 'Capitan', 'Scott Lang');
 })();
-(function () {
-    var getName = function () { return console.log('Viejo getName'); };
->>>>>>> Caracteristicas-ES6
+(() => {
+	class Avenger {
+		constructor(name, realName) {
+			this.name = name;
+			this.realName = realName;
+		}
+		getFullName() {
+			return `${this.name} ${this.realName}`;
+		}
+	}
+	class Xmen extends Avenger {
+		constructor(name, realName, isMutan) {
+			super(name, realName);
+			this.isMutan = isMutan;
+		}
+		get fullName() {
+			return `${this.name} - ${this.realName}`;
+		}
+		set fullName(name) {
+			if (name.length < 3) {
+				throw new Error('El nombre debe ser mayor de 3 letras');
+			}
+			this.name = name;
+		}
+		getFullNameDesdeXmen() {
+			console.log(super.getFullName());
+		}
+	}
+	const wolverine = new Xmen('Wolverine', 'logan', true);
+	wolverine.fullName = 'Jesus';
+})();
+(() => {
+	class Apocalipsis {
+		constructor(name) {
+			this.name = name;
+		}
+		static callApocalipsis() {
+			if (!Apocalipsis.instance) {
+				Apocalipsis.instance = new Apocalipsis('Soy apocalipsis el uinico');
+			}
+			return Apocalipsis.instance;
+		}
+		changeMame(newName) {
+			this.name = newName;
+		}
+	}
+	const apocalipsis = Apocalipsis.callApocalipsis();
+	const apocalipsis2 = Apocalipsis.callApocalipsis();
+	const apocalipsis3 = Apocalipsis.callApocalipsis();
+	apocalipsis.changeMame('Xavier');
+	console.log(apocalipsis, apocalipsis2, apocalipsis3);
 })();
 //# sourceMappingURL=main.js.map
