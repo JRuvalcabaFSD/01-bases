@@ -1,35 +1,51 @@
-'use strict';
-(function () {
-	// Tipos
-	var batman = 'Bruce';
-	var superman = 'Clark';
-	var existe = false;
-	// Tuplas
-	var parejaHeroes = [batman, superman];
-	var villano = ['Lex Lutor', 5, true];
-	// Arreglos
-	var aliados = ['Mujer Maravilla', 'Acuaman', 'San', 'Flash'];
-	//Enumeraciones
-	var Fuerza;
-	(function (Fuerza) {
-		Fuerza[(Fuerza['acuaman'] = 0)] = 'acuaman';
-		Fuerza[(Fuerza['batman'] = 1)] = 'batman';
-		Fuerza[(Fuerza['flash'] = 5)] = 'flash';
-		Fuerza[(Fuerza['superman'] = 100)] = 'superman';
-	})(Fuerza || (Fuerza = {}));
-	var fuerzaFlash = Fuerza.flash;
-	var fuerzaSuperman = Fuerza.superman;
-	var fuerzaBatman = Fuerza.batman;
-	var fuerzaAcuaman = Fuerza.acuaman;
-	// Retorno de funciones
-	function activar_batiseñal() {
-		return 'activada';
-	}
-	function pedir_ayuda() {
-		console.log('Auxilio!!!');
-	}
-	// Aserciones de Tipo
-	var poder = '100';
-	var largoDelPoder = poder.length;
-	console.log(largoDelPoder);
-})();
+
+"use strict";
+//! Error 2 - Nombres de tipos en Mayusculas
+// Objetos
+const batimovil = {
+    carroceria: 'Negra',
+    modelo: '6x6',
+    antibalas: true,
+    pasajeros: 4,
+};
+const bumblebee = {
+    carroceria: 'Amarillo con negro',
+    modelo: '4x2',
+    antibalas: true,
+    pasajeros: 4,
+    disparar() {
+        // El metodo disparar es opcional
+        console.log('Disparando');
+    },
+};
+const villanos = [
+    {
+        nombre: 'Lex Luthor',
+        edad: 54,
+        mutante: false,
+    },
+    {
+        nombre: 'Erik Magnus Lehnsherr',
+        edad: 49,
+        mutante: true,
+    },
+    {
+        nombre: 'James Logan',
+        edad: undefined,
+        mutante: true,
+    },
+];
+//! Error 1 - no puse el tipo
+const charles = {
+    poder: 'psiquico',
+    estatura: 1.78,
+};
+const apocalipsis = {
+    lider: true,
+    miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
+};
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique;
+mystique = charles;
+mystique = apocalipsis;
+>>>>>>> Objetos-y-tipos-personalizados

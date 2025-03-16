@@ -1,40 +1,85 @@
-(() => {
-	// Tipos
-	const batman: string = 'Bruce';
-	const superman: string = 'Clark';
 
-	const existe: boolean = false;
+//! Error 2 - Nombres de tipos en Mayusculas
+// Objetos
 
-	// Tuplas
-	const parejaHeroes: [string, string] = [batman, superman];
-	const villano: [string, number, boolean] = ['Lex Lutor', 5, true];
+type superVehicles = {
+	carroceria: string;
+	modelo: string;
+	antibalas: boolean;
+	pasajeros: number;
+	disparar?: () => void;
+};
 
-	// Arreglos
-	const aliados: string[] = ['Mujer Maravilla', 'Acuaman', 'San', 'Flash'];
+const batimovil: superVehicles = {
+	carroceria: 'Negra',
+	modelo: '6x6',
+	antibalas: true,
+	pasajeros: 4,
+};
 
-	//Enumeraciones
-	enum Fuerza {
-		acuaman = 0,
-		batman = 1,
-		flash = 5,
-		superman = 100,
-	}
-	const fuerzaFlash: Fuerza = Fuerza.flash;
-	const fuerzaSuperman: Fuerza = Fuerza.superman;
-	const fuerzaBatman: Fuerza = Fuerza.batman;
-	const fuerzaAcuaman: Fuerza = Fuerza.acuaman;
+const bumblebee: superVehicles = {
+	carroceria: 'Amarillo con negro',
+	modelo: '4x2',
+	antibalas: true,
+	pasajeros: 4,
+	disparar() {
+		// El metodo disparar es opcional
+		console.log('Disparando');
+	},
+};
 
-	// Retorno de funciones
-	function activar_batiseñal(): String {
-		return 'activada';
-	}
+// Villanos debe de ser un arreglo de objetos personalizados
+type hero = {
+	nombre: string;
+	// edad: number | undefined;
+	edad?: number;
+	mutante: boolean;
+};
 
-	function pedir_ayuda(): void {
-		console.log('Auxilio!!!');
-	}
+const villanos: hero[] = [
+	{
+		nombre: 'Lex Luthor',
+		edad: 54,
+		mutante: false,
+	},
+	{
+		nombre: 'Erik Magnus Lehnsherr',
+		edad: 49,
+		mutante: true,
+	},
+	{
+		nombre: 'James Logan',
+		edad: undefined,
+		mutante: true,
+	},
+];
 
-	// Aserciones de Tipo
-	const poder: any = '100';
-	const largoDelPoder: number = (poder as string).length;
-	console.log(largoDelPoder);
-})();
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+type superLeader = {
+	poder: string;
+	estatura: number;
+};
+
+type villianTeem = {
+	lider: boolean;
+	miembros: string[];
+};
+
+//! Error 1 - no puse el tipo
+const charles: superLeader = {
+	poder: 'psiquico',
+	estatura: 1.78,
+};
+
+const apocalipsis: villianTeem = {
+	lider: true,
+	miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
+};
+
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique: superLeader | villianTeem;
+
+mystique = charles;
+mystique = apocalipsis;
+>>>>>>> Objetos-y-tipos-personalizados
