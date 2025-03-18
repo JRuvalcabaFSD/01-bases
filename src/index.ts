@@ -1,6 +1,5 @@
 import { genericFunctionArrow } from './generics/generics';
-import { Hero } from './interfases/hero';
-import { Villian } from './interfases/villan';
+import { Hero, Villian } from './interfases';
 
 // console.log(genericFunctionArrow(3.1416).toFixed(2));
 // console.log(genericFunctionArrow('Hola Mundo').toUpperCase());
@@ -11,4 +10,4 @@ const deadpool = {
 	dangerLevel: 130,
 };
 
-console.log(genericFunctionArrow<Villian>(deadpool).daherLevel);
+console.log(genericFunctionArrow<Hero>(deadpool).daherLevel);
