@@ -1,0 +1,8 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JRuvalcabaFSD/01-bases.git",
+  "author": "Jesus Ruvalcaba <jruvalcabafsd@gmail.com>",
+  "license": "MIT"
+}
