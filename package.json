@@ -29,7 +29,8 @@
 		"@types/serve-index": "^1.9.4",
 		"@types/serve-static": "^1.15.7",
 		"@types/sockjs": "^0.3.36",
-		"@types/ws": "^8.18.0"
+		"@types/ws": "^8.18.0",
+		"axios": "^1.8.3"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "^11.0.0",
